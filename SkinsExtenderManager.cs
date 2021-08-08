@@ -5,7 +5,7 @@ using System.Xml;
 
 namespace SkinsExtender
 {
-    public class SkinsExtenderManager
+    public sealed class SkinsExtenderManager
     {
         // Iterate through every custom xml file for extension.
         public static XmlDocument CreateExtendedXmlFile(XmlDocument toBeExtended, List<Tuple<string, string>> extensions)

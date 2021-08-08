@@ -10,9 +10,9 @@ using TaleWorlds.ObjectSystem;
 namespace SkinsExtender
 {
     [HarmonyPatch(typeof(Module), "CreateProcessedSkinsXMLForNative")]
-    public class SkinsExtenderModule
+    public sealed class SkinsExtenderModule
     {
-        // Get the xml file path which matches the id in every project.mbproj.
+        // Get the xml file path which matches the id in every project.mbproj file.
         internal static void Postfix(ref string __result)
         {
             XmlDocument xmlDocument = new XmlDocument();
